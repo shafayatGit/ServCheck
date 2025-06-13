@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../../assets/AuthContext/AuthContext";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
+  const { user, logOutUser } = useContext(AuthContext);
+
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -54,21 +58,64 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <NavLink>Home</NavLink>
-          </li>
-          <li>
-            <NavLink>Services</NavLink>
-          </li>
+          {user ? (
+            <>
+              <li>
+                <NavLink>Home</NavLink>
+              </li>
+              <li>
+                <NavLink>Services</NavLink>
+              </li>
+              <li>
+                <NavLink>Add Service</NavLink>
+              </li>
+              <li>
+                <NavLink>My Services</NavLink>
+              </li>
+              <li>
+                <NavLink>My Reviews</NavLink>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <NavLink>Home</NavLink>
+              </li>
+              <li>
+                <NavLink>Services</NavLink>
+              </li>
+            </>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
-        <NavLink to={"login"}>
-          <button className="btn">Login</button>
-        </NavLink>
-        <NavLink to={"register"}>
-          <button className="btn">Register</button>
-        </NavLink>
+        {user ? (
+          <div className="flex gap-3 items-center">
+            <Link>
+              <img
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user.displayName}
+                className="h-12 w-12 rounded-full cursor-pointer"
+                src={user.photoURL}
+              ></img>
+              <Tooltip id="my-tooltip"></Tooltip>
+            </Link>
+            <NavLink>
+              <button onClick={logOutUser} className="btn">
+                Logout
+              </button>
+            </NavLink>
+          </div>
+        ) : (
+          <>
+            <NavLink to={"login"}>
+              <button className="btn">Login</button>
+            </NavLink>
+            <NavLink to={"register"}>
+              <button className="btn">Register</button>
+            </NavLink>
+          </>
+        )}
       </div>
     </div>
   );

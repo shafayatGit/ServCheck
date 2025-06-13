@@ -3,12 +3,31 @@ import { Link, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../assets/AuthContext/AuthContext";
 import { toast } from "react-toastify";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../../Firebase/firebase.config";
 
 const Register = () => {
   const { createUser, updateUser, setUser, setLoading } =
     useContext(AuthContext);
 
   const navigate = useNavigate();
+
+  //   For google
+  const provider = new GoogleAuthProvider();
+  const handleGoogleSignUp = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        setUser(result.user);
+        navigate("/");
+        toast.success("Your account has been logged in successfully.");
+
+        console.log(result);
+      })
+      .catch((error) => {
+        toast.error("🚫 Login failed. Please try again.");
+        console.log(error);
+      });
+  };
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -82,6 +101,7 @@ const Register = () => {
               <form onSubmit={handleRegister}>
                 <fieldset className="fieldset">
                   <button
+                    onClick={handleGoogleSignUp}
                     type="button"
                     className=" cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
                   >
