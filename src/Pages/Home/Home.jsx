@@ -1,11 +1,16 @@
 import React from "react";
 import PartnersSection from "../../Components/PartnersSection";
+import WhyChooseUs from "../../Components/WhyChooseUs";
+import TestimonialsSection from "../../Components/TestimonialsSection";
+import BannerSection from "../../Components/BannerSection";
 
 const Home = () => {
   return (
     <div>
-      <h1>I am home</h1>
+      <BannerSection></BannerSection>
       <PartnersSection></PartnersSection>
+      <WhyChooseUs></WhyChooseUs>
+      <TestimonialsSection></TestimonialsSection>
     </div>
   );
 };
