@@ -61,19 +61,19 @@ const Navbar = () => {
           {user ? (
             <>
               <li>
-                <NavLink>Home</NavLink>
+                <NavLink to={"/"}>Home</NavLink>
               </li>
               <li>
-                <NavLink>Services</NavLink>
+                <NavLink to={"/services"}>Services</NavLink>
               </li>
               <li>
-                <NavLink>Add Service</NavLink>
+                <NavLink to={"/addService"}>Add Service</NavLink>
               </li>
               <li>
-                <NavLink>My Services</NavLink>
+                <NavLink to={"/myServices"}>My Services</NavLink>
               </li>
               <li>
-                <NavLink>My Reviews</NavLink>
+                <NavLink to={"/myReviews"}>My Reviews</NavLink>
               </li>
             </>
           ) : (
@@ -91,15 +91,14 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex gap-3 items-center">
-            <Link>
-              <img
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content={user.displayName}
-                className="h-12 w-12 rounded-full cursor-pointer"
-                src={user.photoURL}
-              ></img>
-              <Tooltip id="my-tooltip"></Tooltip>
-            </Link>
+            <img
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content={user.displayName}
+              className="h-12 w-12 rounded-full cursor-pointer"
+              src={user.photoURL}
+            ></img>
+            <Tooltip id="my-tooltip"></Tooltip>
+
             <NavLink>
               <button onClick={logOutUser} className="btn">
                 Logout

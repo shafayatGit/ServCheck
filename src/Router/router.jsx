@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         Component: Register,
       },
       {
-        path: "addServices",
+        path: "addService",
         element: (
           <PrivateRoute>
             <AddServices></AddServices>

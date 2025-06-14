@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 const RootLayouts = () => {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <Navber></Navber>
       <Outlet></Outlet>
       <Footer></Footer>

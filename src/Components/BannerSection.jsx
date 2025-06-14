@@ -49,26 +49,15 @@ const BannerSection = () => {
               <div className="hero-overlay"></div>
               <div className="hero-content text-neutral-content text-center">
                 <div className="max-w-md">
-                  <h1 className="mb-5 text-5xl font-bold">{slide.title}</h1>
-                  <p className="mb-5">{slide.description}</p>
-                </div>
-              </div>
-            </div>
-            {/* <div
-              className="w-full h-full bg-cover relative"
-              style={{ backgroundImage: `url(${slide.image})` }}
-            >
-              <div className="absolute inset-0 bg-opacity-60 flex items-center justify-center px-8">
-                <div className="text-center text-black max-w-2xl">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+                  <h1 className="mb-5 text-5xl text-white drop-shadow-lg font-bold">
                     {slide.title}
-                  </h2>
-                  <p className="text-lg md:text-xl font-medium drop-shadow-md">
+                  </h1>
+                  <p className="mb-5 text-yellow-100 drop-shadow">
                     {slide.description}
                   </p>
                 </div>
               </div>
-            </div> */}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
