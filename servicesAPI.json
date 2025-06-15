@@ -1,0 +1,79 @@
+[
+  {
+    "photoUrl": "https://i.ibb.co/Myyq2370/vivasoft.png",
+    "title": "UI/UX Design Service",
+    "name": "DesignFlow Studio",
+    "website": "https://designflow.io",
+    "description": "User-centered UI/UX design services for mobile and web applications.",
+    "category": "Design",
+    "price": 299.00,
+    "addedDate": "2025-06-12T09:45:00Z",
+    "email": "shafayathossain.drmc@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/cc2ZzYCZ/optimizely.jpg",
+    "title": "SEO Optimization",
+    "companyName": "RankBoost",
+    "website": "https://rankboost.co",
+    "description": "Boost your search engine rankings with our expert SEO strategies.",
+    "category": "Marketing",
+    "price": 149.00,
+    "addedDate": "2025-06-12T10:00:00Z",
+    "email": "shafayathossain.ielts@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/fVQzjBDG/leadsoft.jpg",
+    "title": "E-commerce Website Setup",
+    "companyName": "ShopSmart Solutions",
+    "website": "https://shopsmart.dev",
+    "description": "Complete e-commerce setup with Shopify or WooCommerce.",
+    "category": "Web Development",
+    "price": 699.99,
+    "addedDate": "2025-06-12T10:15:00Z",
+    "email": "shafayathossain.drmc@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/hxnBdLgY/kaaj.png",
+    "title": "Digital Marketing Campaign",
+    "companyName": "ClickMedia",
+    "website": "https://clickmedia.agency",
+    "description": "Targeted ads, content creation, and campaign management.",
+    "category": "Marketing",
+    "price": 450.00,
+    "addedDate": "2025-06-12T10:30:00Z",
+    "email": "shafayathossain.drmc@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/B8P2BZh/enosis-solution-squarelogo-1379419865894.webp",
+    "title": "Custom Mobile App Development",
+    "companyName": "AppForge",
+    "website": "https://appforge.tech",
+    "description": "Cross-platform mobile apps using React Native or Flutter.",
+    "category": "App Development",
+    "price": 999.00,
+    "addedDate": "2025-06-12T10:45:00Z",
+    "email": "shafayathossain.ielts@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/LDmLNHHv/dream71.jpg",
+    "title": "Cloud Infrastructure Setup",
+    "companyName": "CloudGears",
+    "website": "https://cloudgears.dev",
+    "description": "Deploy scalable apps with AWS, Azure, or GCP.",
+    "category": "DevOps",
+    "price": 850.00,
+    "addedDate": "2025-06-12T11:00:00Z",
+    "email": "shafayathossain.drmc@gmail.com"
+  },
+  {
+    "photoUrl": "https://i.ibb.co/gF3Cz2QK/CEFALO-Amravi-Limited.jpg",
+    "title": "Content Writing & Copywriting",
+    "companyName": "WordSmiths",
+    "website": "https://wordsmiths.io",
+    "description": "Professional content creation for blogs, landing pages, and ads.",
+    "category": "Writing",
+    "price": 120.00,
+    "addedDate": "2025-06-12T11:15:00Z",
+    "email": "shafayathossain.ielts@gmail.com"
+  }
+]

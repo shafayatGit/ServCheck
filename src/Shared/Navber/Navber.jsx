@@ -52,7 +52,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex items-center">
-          <img className="w-10 h-10" src="logo.png" alt="" />
+          <img
+            className="w-10 h-10"
+            src="https://i.ibb.co/tMBfjNrN/logo.png"
+            alt=""
+          />
           <Link className=" text-xl">ServCheck</Link>
         </div>
       </div>

@@ -8,6 +8,7 @@ import PrivateRoute from "../assets/AuthContext/PrivateRoute";
 import AddServices from "../Pages/Add_Services/AddServices";
 import MyServices from "../Pages/My_Services/MyServices";
 import MyReviews from "../Pages/My_Reviews/MyReviews";
+import ServiceDetails from "../Components/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,26 @@ const router = createBrowserRouter([
       {
         path: "services",
         Component: Services,
+        loader: () => fetch("http://localhost:3000/services"),
+        hydrateFallbackElement: (
+          <div className="w-full h-dvh mx-auto flex justify-center items-center">
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        ),
+      },
+      {
+        path: "services/:id",
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("http://localhost:3000/services"),
+        hydrateFallbackElement: (
+          <div className="w-full h-dvh mx-auto flex justify-center items-center">
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        ),
       },
       {
         path: "login",
