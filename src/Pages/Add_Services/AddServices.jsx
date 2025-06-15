@@ -40,46 +40,54 @@ const AddServices = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
+    <div className=" bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold text-center mb-6 ">Add New Service</h2>
-      <form onSubmit={handleAddService} className="space-y-5">
+      <form onSubmit={handleAddService} className="space-y-5 ">
         <div>
-          <label className="block font-medium mb-1">Service Image URL</label>
+          <label className="block text-white font-medium mb-1">
+            Service Image URL
+          </label>
           <input
             name="photoUrl"
             type="text"
             placeholder="Enter image URL"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="  text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Service Title</label>
+          <label className=" text-white block font-medium mb-1">
+            Service Title
+          </label>
           <input
             name="title"
             type="text"
             placeholder="Enter title"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Company Name</label>
+          <label className="text-white block font-medium mb-1">
+            Company Name
+          </label>
           <input
             name="name"
             type="text"
             placeholder="Enter company name"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Company Website</label>
+          <label className="text-white block font-medium mb-1">
+            Company Website
+          </label>
           <input
-            name="companyWebsite"
+            name="website"
             type="text"
             placeholder="Enter website URL"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -89,49 +97,53 @@ const AddServices = () => {
             name="description"
             placeholder="Describe your service"
             rows="4"
-            className="w-full px-4 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Category</label>
+          <label className="text-white block font-medium mb-1">Category</label>
           <input
             name="category"
             type="text"
             placeholder="e.g. Marketing, Design"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Price</label>
+          <label className="text-white block font-medium mb-1">Price</label>
           <input
             name="price"
             type="number"
             placeholder="Enter price"
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">Added Date</label>
+          <label className="text-white block font-medium mb-1">
+            Added Date
+          </label>
           <input
             name="date"
             type="date"
             value={today}
             readOnly
-            className="w-full px-4 py-2 border rounded-m cursor-not-allowed"
+            className="text-white w-full px-4 py-2 border rounded-m cursor-not-allowed"
           />
         </div>
 
         <div>
-          <label className="block font-medium mb-1">User Email</label>
+          <label className="text-white block font-medium mb-1">
+            User Email
+          </label>
           <input
             name="email"
             type="email"
             value={user.email}
             readOnly
-            className="w-full px-4 py-2 border rounded-m cursor-not-allowed"
+            className="text-white w-full px-4 py-2 border rounded-m cursor-not-allowed"
           />
         </div>
 

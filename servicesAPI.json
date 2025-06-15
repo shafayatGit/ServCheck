@@ -13,7 +13,7 @@
   {
     "photoUrl": "https://i.ibb.co/cc2ZzYCZ/optimizely.jpg",
     "title": "SEO Optimization",
-    "companyName": "RankBoost",
+    "name": "RankBoost",
     "website": "https://rankboost.co",
     "description": "Boost your search engine rankings with our expert SEO strategies.",
     "category": "Marketing",
@@ -24,7 +24,7 @@
   {
     "photoUrl": "https://i.ibb.co/fVQzjBDG/leadsoft.jpg",
     "title": "E-commerce Website Setup",
-    "companyName": "ShopSmart Solutions",
+    "name": "ShopSmart Solutions",
     "website": "https://shopsmart.dev",
     "description": "Complete e-commerce setup with Shopify or WooCommerce.",
     "category": "Web Development",
@@ -35,7 +35,7 @@
   {
     "photoUrl": "https://i.ibb.co/hxnBdLgY/kaaj.png",
     "title": "Digital Marketing Campaign",
-    "companyName": "ClickMedia",
+    "name": "ClickMedia",
     "website": "https://clickmedia.agency",
     "description": "Targeted ads, content creation, and campaign management.",
     "category": "Marketing",
@@ -46,7 +46,7 @@
   {
     "photoUrl": "https://i.ibb.co/B8P2BZh/enosis-solution-squarelogo-1379419865894.webp",
     "title": "Custom Mobile App Development",
-    "companyName": "AppForge",
+    "name": "AppForge",
     "website": "https://appforge.tech",
     "description": "Cross-platform mobile apps using React Native or Flutter.",
     "category": "App Development",
@@ -57,7 +57,7 @@
   {
     "photoUrl": "https://i.ibb.co/LDmLNHHv/dream71.jpg",
     "title": "Cloud Infrastructure Setup",
-    "companyName": "CloudGears",
+    "name": "CloudGears",
     "website": "https://cloudgears.dev",
     "description": "Deploy scalable apps with AWS, Azure, or GCP.",
     "category": "DevOps",
@@ -68,7 +68,7 @@
   {
     "photoUrl": "https://i.ibb.co/gF3Cz2QK/CEFALO-Amravi-Limited.jpg",
     "title": "Content Writing & Copywriting",
-    "companyName": "WordSmiths",
+    "name": "WordSmiths",
     "website": "https://wordsmiths.io",
     "description": "Professional content creation for blogs, landing pages, and ads.",
     "category": "Writing",

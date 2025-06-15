@@ -40,13 +40,13 @@ const Services = () => {
           placeholder="Search services..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full md:w-1/2 px-4 py-2 border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
         />
 
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full md:w-1/4 px-4 py-2 border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
         >
           {categories.map((cat) => (
             <option className="text-black" key={cat} value={cat}>
@@ -61,31 +61,39 @@ const Services = () => {
         {filteredServices.map((service) => (
           <div
             key={service._id}
-            className="bg-white rounded-lg shadow hover:shadow-xl transition duration-300"
+            className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 image-full  shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl bg-white rounded-lg shadow hover:shadow-xl"
           >
             <img
               src={service.photoUrl}
               className="w-full h-48 object-cover rounded-t-lg"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold mb-1">{service.title}</h3>
-              <p className="text-sm text-gray-600 mb-2">
-                {service.description}
-              </p>
-              <div className="flex justify-between text-sm text-gray-700 mb-3">
+              <h3 className="text-xl text-black font-semibold mb-1">
+                {service.name}
+              </h3>
+              <h3 className="text-lg text-black  font-semibold mb-1">
+                {service.title}
+              </h3>
+              <p className="text-sm text-black mb-2">{service.description}</p>
+              <div className="flex justify-between text-sm text-black mb-3">
                 <span className="font-medium">{service.category}</span>
                 <span className="font-bold text-green-600">
                   ${service.price}
                 </span>
               </div>
-              <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
-                See Details
-              </button>
+              <Link to={`/services/${service._id}`}>
+                <button className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blue-600 rounded-full hover:bg-blue-300 active:bg-blue-300 group">
+                  <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+                  <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600 group-active:text-blue-600">
+                    See Details
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         ))}
         {filteredServices.length === 0 && (
-          <p className="text-center text-gray-500 col-span-full">
+          <p className="text-center text-black col-span-full">
             No services found.
           </p>
         )}
