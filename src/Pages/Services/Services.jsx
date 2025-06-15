@@ -6,33 +6,58 @@ const Services = () => {
   //   console.log(services);
 
   const [query, setQuery] = useState("");
-  const [services, setServices] = useState(sampleServices);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredServices = services.filter((service) =>
-    `${service.title} ${service.category} ${service.name}`
+  const categories = [
+    "Marketing",
+    "Web Development",
+    "App Development",
+    "DevOps",
+    "Writing",
+  ];
+
+  const filteredServices = sampleServices.filter((service) => {
+    const matchesSearch = `${service.title} ${service.category} ${service.name}`
       .toLowerCase()
-      .includes(query.toLowerCase())
-  );
+      .includes(query.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "All" || service.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-6 text-blue-800">
+      <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">
         All Services
       </h2>
 
-      {/* Search input */}
-      <div className="mb-6 flex justify-center">
+      {/* Search and Filter */}
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
         <input
           type="text"
-          placeholder="Search by title, category, or company..."
+          placeholder="Search services..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full max-w-md px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          {categories.map((cat) => (
+            <option className="text-black" key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Service Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredServices.map((service) => (
           <div
             key={service._id}
@@ -43,13 +68,13 @@ const Services = () => {
               className="w-full h-48 object-cover rounded-t-lg"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold">{service.title}</h3>
+              <h3 className="text-xl font-semibold mb-1">{service.title}</h3>
               <p className="text-sm text-gray-600 mb-2">
                 {service.description}
               </p>
-              <div className="flex justify-between text-sm mb-3">
-                <span className="text-blue-600">{service.category}</span>
-                <span className="text-green-600 font-bold">
+              <div className="flex justify-between text-sm text-gray-700 mb-3">
+                <span className="font-medium">{service.category}</span>
+                <span className="font-bold text-green-600">
                   ${service.price}
                 </span>
               </div>
