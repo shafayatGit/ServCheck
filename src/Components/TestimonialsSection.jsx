@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
           {testimonials.map((user, i) => (
             <div
               key={i}
-              className="p-9 flex flex-col justify-center rounded-xl shadow hover:shadow-blue-300 shadow-blue-300  hover:shadow-lg transition duration-300 hover:scale-105"
+              className="p-9 px-3 flex flex-col justify-center rounded-xl shadow hover:shadow-blue-300 shadow-blue-300  hover:shadow-lg transition duration-300 hover:scale-105"
             >
               <img
                 src={user.avatar}

@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="py-3 mont navbar bg-base-100 shadow-sm border-b border-blue-400">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className=" lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -32,23 +32,97 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
+            {user ? (
+              <>
                 <li>
-                  <a>Submenu 1</a>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                    to={"/"}
+                  >
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                    to={"/services"}
+                  >
+                    Services
+                  </NavLink>
                 </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                    to={"/addService"}
+                  >
+                    Add Service
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                    to={"/myServices"}
+                  >
+                    My Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                    to={"/myReviews"}
+                  >
+                    My Reviews
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <NavLink
+                    to={"/"}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to={"/services"}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-blue-300 font-bold border-b border-blue-400"
+                        : ""
+                    }
+                  >
+                    Services
+                  </NavLink>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div className="flex items-center">
