@@ -3,13 +3,10 @@ import { Link, useLoaderData, useParams } from "react-router";
 import { Star, MapPin, Clock, Phone, Mail, User, Calendar } from "lucide-react";
 import { AuthContext } from "../assets/AuthContext/AuthContext";
 import Swal from "sweetalert2";
-import { Rating } from '@smastrom/react-rating'
+import { Rating } from "@smastrom/react-rating";
 
-import '@smastrom/react-rating/style.css'
-
-
-
-
+import "@smastrom/react-rating/style.css";
+import axios from "axios";
 
 const ServiceDetails = () => {
   const Servicedata = useLoaderData();
@@ -17,49 +14,65 @@ const ServiceDetails = () => {
   const { id } = useParams();
   //   console.log(id);
   const { user } = useContext(AuthContext);
-  // console.log(user);
-
-  
 
   const singleService = Servicedata.find((service) => service._id === id);
   //   console.log(singleService);
-  const { name, category, description, title, price, photoUrl } = singleService;
+  const { category, description, title, price, photoUrl } = singleService;
 
   const [service] = useState(singleService);
 
- 
+  // const formatDate = (dateString) => {
+  //   return new Date(dateString).toLocaleDateString("en-US", {
+  //     year: "numeric",
+  //     month: "long",
+  //     day: "numeric",
+  //   });
+  // };
 
-  const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+  const [rating, setRating] = useState(0);
+
+  const handleReview = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const review = form.review.value;
+    // const reviewInfo = Object.fromEntries(formData.entries());
+    const newReview = {
+      id: id,
+      review: review,
+      rating: rating,
+      date: new Date().toISOString(),
+      displayName: user.displayName,
+      photoUrl: user.photoURL,
+    };
+    console.log(newReview);
+
+    axios
+      .post("http://localhost:3000/reviews", newReview)
+      .then((res) => {
+        if (res.data.insertedId) {
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `Your review has been created`,
+            showConfirmButton: false,
+            timer: 2000,
+          });
+          // toast.success("Group has been created successfully.");
+        }
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
-
-  const [rating, setRating] = useState(0)
-
-  const handleReview = e =>{
-    e.preventDefault()
-     const form = e.target;
-    const formData = new FormData(form);
-    const reviewInfo = Object.fromEntries(formData.entries());
-    console.log(reviewInfo, rating);
-  }
-
-  
-
-  
 
   return (
     <div>
-      
       <div className=" px-5 max-w-6xl mx-auto mt-24 card card-side bg-base-100 flex items-center flex-col md:flex-row shadow shadow-blue-300 hover:scale-105 active:scale-105 transition ease-in-out hover:shadow-2xl hover:shadow-blue-300 active:shadow-2xl active:shadow-blue-300 work">
         <figure>
           <img className="rounded-xl h-86" src={photoUrl} alt="Movie" />
         </figure>
         <div className="card-body">
-            
           <div className="flex justify-between">
             <h2 className="text-xl font-semibold">
               Service Name: <br />
@@ -110,35 +123,37 @@ const ServiceDetails = () => {
       </div>
       {/* Add Review Section */}
       <h2 className="text-xl font-bold mb-4">Add Your Review</h2>
-          
-          
-            <form onClick={handleReview}>
-              <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Rating
-              </label>
-              <Rating style={{ maxWidth: 200 }} value={rating} onChange={setRating} />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Your Review
-              </label>
-              <textarea
-               name="review"
-                placeholder="Share your experience with this service..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                rows="4"
-              />
-            </div>
-            
-            <button
-             type="submit"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
-            >
-              Add Review
-            </button>
-            </form>
+
+      <form onSubmit={handleReview}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Your Rating
+          </label>
+          <Rating
+            style={{ maxWidth: 200 }}
+            value={rating}
+            onChange={setRating}
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Your Review
+          </label>
+          <textarea
+            name="review"
+            placeholder="Share your experience with this service..."
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            rows="4"
+          />
+        </div>
+
+        <input
+          value={"Add Review"}
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+        ></input>
+      </form>
     </div>
   );
 };
