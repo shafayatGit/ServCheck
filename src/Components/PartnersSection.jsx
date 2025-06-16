@@ -27,7 +27,7 @@ const partners = [
 const PartnersSection = () => {
   return (
     <section className="py-16 ">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+      <div className="max-w-7xl mx-auto px-4 text-center ">
         <h2 className="text-3xl font-bold  mb-4">Meet Our Partners</h2>
         <p className=" mb-12">
           We’re proud to collaborate with industry leaders who help power our
@@ -37,7 +37,7 @@ const PartnersSection = () => {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className=" rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
+              className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow hover:shadow-xl"
             >
               <img
                 src={partner.logo}

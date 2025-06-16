@@ -7,7 +7,7 @@ import FeaturedServices from "../../Components/FeaturedServices";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mt-10 nuni">
       <BannerSection></BannerSection>
       <FeaturedServices></FeaturedServices>
       <PartnersSection></PartnersSection>

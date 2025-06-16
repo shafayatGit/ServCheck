@@ -16,7 +16,7 @@ const FeaturedServices = () => {
   }, []);
   return (
     <div>
-      <h1 className="text-3xl font-bold text-center mt-22 mb-8 text-blue-800">
+      <h1 className="text-3xl font-bold text-center mt-22 mb-8 text-blue-400">
         Featured Services
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

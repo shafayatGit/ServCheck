@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { use, useContext, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { Star, MapPin, Clock, Phone, Mail, User, Calendar } from "lucide-react";
 import { AuthContext } from "../assets/AuthContext/AuthContext";
@@ -8,11 +8,12 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import axios from "axios";
 
-const ServiceDetails = () => {
+const ServiceDetails = ({ reviewByIdPromise }) => {
   const Servicedata = useLoaderData();
-  //   console.log(Servicedata);
+
+  // const [reviews, setReviews] = useState(reviewData);
   const { id } = useParams();
-  //   console.log(id);
+
   const { user } = useContext(AuthContext);
 
   const singleService = Servicedata.find((service) => service._id === id);
@@ -37,7 +38,6 @@ const ServiceDetails = () => {
     const review = form.review.value;
     // const reviewInfo = Object.fromEntries(formData.entries());
     const newReview = {
-      id: id,
       review: review,
       rating: rating,
       date: new Date().toISOString(),
