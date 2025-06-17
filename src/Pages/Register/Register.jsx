@@ -5,6 +5,7 @@ import { AuthContext } from "../../assets/AuthContext/AuthContext";
 import { toast } from "react-toastify";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../Firebase/firebase.config";
+import { Fade } from "react-awesome-reveal";
 
 const Register = () => {
   const { createUser, updateUser, setUser, setLoading } =
@@ -90,78 +91,83 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <div className="hero bg-blue-200 min-h-screen nuni">
-        <div className="hero-content flex-col ">
-          <div className="text-center">
-            <h1 className="text-5xl text-blue-700 font-bold">Register now!</h1>
-          </div>
-          <div className="card bg-blue-300 shadow-blue-300 w-full max-w-sm shrink-0 shadow-2xl">
-            <div className="card-body">
-              <form onSubmit={handleRegister}>
-                <fieldset className="fieldset">
-                  <button
-                    onClick={handleGoogleSignUp}
-                    type="button"
-                    className=" cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
-                  >
-                    <img
-                      src="https://www.svgrepo.com/show/475656/google-color.svg"
-                      alt="Google"
-                      className="w-5 h-5"
+    <Fade>
+      {" "}
+      <div>
+        <div className="hero bg-blue-200 min-h-screen nuni">
+          <div className="hero-content flex-col ">
+            <div className="text-center">
+              <h1 className="text-5xl text-blue-700 font-bold">
+                Register now!
+              </h1>
+            </div>
+            <div className="card bg-blue-300 shadow-blue-300 w-full max-w-sm shrink-0 shadow-2xl">
+              <div className="card-body">
+                <form onSubmit={handleRegister}>
+                  <fieldset className="fieldset">
+                    <button
+                      onClick={handleGoogleSignUp}
+                      type="button"
+                      className=" cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
+                    >
+                      <img
+                        src="https://www.svgrepo.com/show/475656/google-color.svg"
+                        alt="Google"
+                        className="w-5 h-5"
+                      />
+                      Sign up with Google
+                    </button>
+                    <div className="text-center text-white my-4">— or —</div>
+                    {/* Name */}
+                    <label className="label">Name</label>
+                    <input
+                      name="name"
+                      type="text"
+                      className="input"
+                      placeholder="Name"
                     />
-                    Sign up with Google
-                  </button>
-                  <div className="text-center text-white my-4">— or —</div>
-                  {/* Name */}
-                  <label className="label">Name</label>
-                  <input
-                    name="name"
-                    type="text"
-                    className="input"
-                    placeholder="Name"
-                  />
-                  {/* Email */}
-                  <label className="label">Email</label>
-                  <input
-                    name="email"
-                    type="email"
-                    className="input"
-                    placeholder="Email"
-                  />
-                  {/* PhotoURL */}
-                  <label className="label">PhotoURL</label>
-                  <input
-                    name="photoUrl"
-                    type="text"
-                    className="input"
-                    placeholder="PhotoURL"
-                  />
-                  {/* PassWord */}
-                  <label className="label">Password</label>
-                  <input
-                    name="password"
-                    type="text"
-                    className="input"
-                    placeholder="password"
-                  />
+                    {/* Email */}
+                    <label className="label">Email</label>
+                    <input
+                      name="email"
+                      type="email"
+                      className="input"
+                      placeholder="Email"
+                    />
+                    {/* PhotoURL */}
+                    <label className="label">PhotoURL</label>
+                    <input
+                      name="photoUrl"
+                      type="text"
+                      className="input"
+                      placeholder="PhotoURL"
+                    />
+                    {/* PassWord */}
+                    <label className="label">Password</label>
+                    <input
+                      name="password"
+                      type="text"
+                      className="input"
+                      placeholder="password"
+                    />
 
-                  <button type="submit" className="btn btn-neutral mt-4">
-                    Register
-                  </button>
-                </fieldset>
-              </form>
-              <div className="flex gap-2 justify-center">
-                <h1>Already have an account?</h1>
-                <Link className="text-blue-600" to={"/login"}>
-                  Login
-                </Link>
+                    <button type="submit" className="btn btn-neutral mt-4">
+                      Register
+                    </button>
+                  </fieldset>
+                </form>
+                <div className="flex gap-2 justify-center">
+                  <h1>Already have an account?</h1>
+                  <Link className="text-blue-600" to={"/login"}>
+                    Login
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const partners = [
   {
@@ -26,31 +27,34 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="py-16 ">
-      <div className="max-w-7xl mx-auto px-4 text-center ">
-        <h2 className="text-3xl font-bold  mb-4">Meet Our Partners</h2>
-        <p className=" mb-12">
-          We’re proud to collaborate with industry leaders who help power our
-          platform.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow hover:shadow-xl"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="h-16 mx-auto mb-4 object-contain"
-              />
-              <h3 className="text-lg font-semibold ">{partner.name}</h3>
-              <p className="text-sm  mt-2">{partner.description}</p>
-            </div>
-          ))}
+    <Fade>
+      {" "}
+      <section className="py-16 ">
+        <div className="max-w-7xl mx-auto px-4 text-center ">
+          <h2 className="text-3xl font-bold  mb-4">Meet Our Partners</h2>
+          <p className=" mb-12">
+            We’re proud to collaborate with industry leaders who help power our
+            platform.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {partners.map((partner, index) => (
+              <div
+                key={index}
+                className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow hover:shadow-xl"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="h-16 mx-auto mb-4 object-contain"
+                />
+                <h3 className="text-lg font-semibold ">{partner.name}</h3>
+                <p className="text-sm  mt-2">{partner.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Fade>
   );
 };
 

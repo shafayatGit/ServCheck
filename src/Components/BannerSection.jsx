@@ -4,6 +4,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Fade } from "react-awesome-reveal";
 
 const slides = [
   {
@@ -29,39 +30,41 @@ const slides = [
 
 const BannerSection = () => {
   return (
-    <section className="max-w-6xl relative mx-auto">
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 5000 }}
-        loop={true}
-        className="w-full h-[80vh]"
-      >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div
-              className="hero min-h-screen"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-              }}
-            >
-              <div className="hero-overlay"></div>
-              <div className="hero-content text-neutral-content text-center">
-                <div className="max-w-md">
-                  <h1 className="mb-5 text-5xl text-white drop-shadow-lg font-bold">
-                    {slide.title}
-                  </h1>
-                  <p className="mb-5 text-yellow-100 drop-shadow">
-                    {slide.description}
-                  </p>
+    <Fade>
+      <section className="max-w-6xl relative mx-auto">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 5000 }}
+          loop={true}
+          className="w-full h-[80vh]"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="hero min-h-screen"
+                style={{
+                  backgroundImage: `url(${slide.image})`,
+                }}
+              >
+                <div className="hero-overlay"></div>
+                <div className="hero-content text-neutral-content text-center">
+                  <div className="max-w-md">
+                    <h1 className="mb-5 text-5xl text-white drop-shadow-lg font-bold">
+                      {slide.title}
+                    </h1>
+                    <p className="mb-5 text-yellow-100 drop-shadow">
+                      {slide.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+    </Fade>
   );
 };
 

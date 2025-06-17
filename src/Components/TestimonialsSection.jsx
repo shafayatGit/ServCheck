@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const testimonials = [
   {
@@ -24,31 +25,34 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className=" py-16">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold  mb-4">What Our Users Say</h2>
-        <p className=" mb-12">
-          Real stories from our growing community of reviewers and service
-          seekers.
-        </p>
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {testimonials.map((user, i) => (
-            <div
-              key={i}
-              className="p-9 px-3 flex flex-col justify-center rounded-xl shadow hover:shadow-blue-300 shadow-blue-300  hover:shadow-lg transition duration-300 hover:scale-105"
-            >
-              <img
-                src={user.avatar}
-                alt={user.name}
-                className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
-              />
-              <p className="text-sm  mb-3">“{user.feedback}”</p>
-              <h4 className="font-semibold ">{user.name}</h4>
-            </div>
-          ))}
+    <Fade>
+      {" "}
+      <section className=" py-16">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold  mb-4">What Our Users Say</h2>
+          <p className=" mb-12">
+            Real stories from our growing community of reviewers and service
+            seekers.
+          </p>
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+            {testimonials.map((user, i) => (
+              <div
+                key={i}
+                className="p-9 px-3 flex flex-col justify-center rounded-xl shadow hover:shadow-blue-300 shadow-blue-300  hover:shadow-lg transition duration-300 hover:scale-105"
+              >
+                <img
+                  src={user.avatar}
+                  alt={user.name}
+                  className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+                />
+                <p className="text-sm  mb-3">“{user.feedback}”</p>
+                <h4 className="font-semibold ">{user.name}</h4>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Fade>
   );
 };
 
