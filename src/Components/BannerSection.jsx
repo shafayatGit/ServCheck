@@ -11,7 +11,7 @@ const slides = [
     description:
       "Discover what customers are saying before you commit. 100% verified feedback.",
     image:
-      "/public/Importance-of-Social-Media-Images-For-Digital-Marketing-7-Tips-For-Amazing-Pictures.png",
+      "https://i.ibb.co/dsZrFCYb/Importance-of-Social-Media-Images-For-Digital-Marketing-7-Tips-For-Amazing-Pictures.png",
   },
   {
     title: "Empower Your Service Choices",
