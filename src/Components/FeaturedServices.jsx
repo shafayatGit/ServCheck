@@ -25,7 +25,7 @@ const FeaturedServices = () => {
           {items.map((item) => (
             <div
               key={item._id}
-              className=" hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 image-full  shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl bg-white rounded-lg shadow hover:shadow-xl"
+              className=" hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 image-full  shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl bg-white rounded-lg shadow-md hover:shadow-xl"
             >
               <img
                 src={item.photoUrl}

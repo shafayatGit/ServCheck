@@ -40,7 +40,7 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow hover:shadow-xl"
+                className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow-md hover:shadow-xl"
               >
                 <img
                   src={partner.logo}
