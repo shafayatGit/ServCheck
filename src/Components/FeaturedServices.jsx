@@ -6,7 +6,7 @@ const FeaturedServices = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:3000/services");
+      const res = await fetch("https://servcheck-server.vercel.app/services");
       const data = await res.json();
       const limited = data.slice(0, 6);
       setItems(limited);

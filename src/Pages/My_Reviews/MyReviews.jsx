@@ -5,7 +5,7 @@ import { reviewByEmailPromise } from "../../API/ReviewsAPI";
 
 const MyReviews = () => {
   const { user } = useContext(AuthContext);
-  console.log(user.email);
+  // console.log(user.email);
   return (
     <div className="nuni">
       <h1 className="text-3xl mt-10 font-bold text-center mb-8 text-blue-800">

@@ -12,6 +12,7 @@ import { reviewByIdPromise } from "../API/ReviewsAPI";
 
 const ServiceDetails = () => {
   const Servicedata = useLoaderData();
+  console.log(Servicedata);
 
   // const [reviews, setReviews] = useState(reviewData);
   const { id } = useParams();
@@ -52,7 +53,7 @@ const ServiceDetails = () => {
     console.log(newReview);
 
     axios
-      .post("http://localhost:3000/reviews", newReview)
+      .post("https://servcheck-server.vercel.app/reviews", newReview)
       .then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
@@ -156,7 +157,9 @@ const ServiceDetails = () => {
         ></input>
       </form>
       <div>
-        <h1>Reviews</h1>
+        <h1 className="text-3xl mt-5 border-b text-blue-600 text-center">
+          All Reviews
+        </h1>
         <Suspense
           fallback={
             <div className="w-full h-dvh mx-auto flex justify-center items-center">
@@ -164,9 +167,9 @@ const ServiceDetails = () => {
             </div>
           }
         >
-          {/* <ServiceReviewList
-            reviewByIdPromise={reviewByIdPromise(_id)}
-          ></ServiceReviewList> */}
+          <ServiceReviewList
+            reviewByIdPromise={reviewByIdPromise(id)}
+          ></ServiceReviewList>
         </Suspense>
       </div>
     </div>

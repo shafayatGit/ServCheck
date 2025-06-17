@@ -1,10 +1,10 @@
-export const reviewByIdPromise = cardId => {
-    return fetch(`http://localhost:3000/reviews/${cardId}`).then(res => res.json())
+export const reviewByIdPromise = id => {
+    return fetch(`https://servcheck-server.vercel.app/reviews/${id}`).then(res => res.json())
 }
 
 
 export const reviewByEmailPromise = (email, accessToken) => {
-    return fetch(`http://localhost:3000/reviews?email=${email}`, {
+    return fetch(`https://servcheck-server.vercel.app/myReviews?email=${email}`, {
             headers: {
                 authorization: `Bearer ${accessToken}`
             }

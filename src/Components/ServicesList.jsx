@@ -33,13 +33,16 @@ const ServicesList = ({ serviceDetailsPromise }) => {
     const updatedFormData = Object.fromEntries(formData.entries());
 
     axios
-      .patch(`http://localhost:3000/services/${_id}`, updatedFormData)
+      .patch(
+        `https://servcheck-server.vercel.app/services/${_id}`,
+        updatedFormData
+      )
       .then((res) => {
         if (res.data.modifiedCount) {
           Swal.fire({
             position: "top-end",
             icon: "success",
-            title: `Your group has been updated`,
+            title: `Your Service has been updated`,
             showConfirmButton: false,
             timer: 2000,
           });
@@ -65,7 +68,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Deleting One Item
-        fetch(`http://localhost:3000/services/${id}`, {
+        fetch(`https://servcheck-server.vercel.app/services/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -77,7 +80,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
 
               Swal.fire({
                 title: "Deleted!",
-                text: "Your group has been deleted.",
+                text: "Your service has been deleted.",
                 icon: "success",
               });
             }

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "services",
         Component: Services,
-        loader: () => fetch("http://localhost:3000/services"),
+        loader: () => fetch("https://servcheck-server.vercel.app/services"),
         hydrateFallbackElement: (
           <div className="w-full h-dvh mx-auto flex justify-center items-center">
             <span className="loading loading-dots loading-xl"></span>
@@ -31,12 +31,13 @@ const router = createBrowserRouter([
       },
       {
         path: "services/:id",
+
         element: (
           <PrivateRoute>
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:3000/services"),
+        loader: () => fetch("https://servcheck-server.vercel.app/services"),
         hydrateFallbackElement: (
           <div className="w-full h-dvh mx-auto flex justify-center items-center">
             <span className="loading loading-dots loading-xl"></span>

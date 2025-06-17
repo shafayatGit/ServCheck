@@ -1,5 +1,5 @@
 export const serviceDetailsPromise = (email, accessToken) => {
-    return fetch(`http://localhost:3000/services?email=${email}`, {
+    return fetch(`https://servcheck-server.vercel.app/myServices?email=${email}`, {
                 headers: {
                     authorization: `Bearer ${accessToken}`
                 }
