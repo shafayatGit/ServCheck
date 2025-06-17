@@ -19,7 +19,10 @@ const MyReviews = () => {
         }
       >
         <ReviewList
-          reviewByEmailPromise={reviewByEmailPromise(user.email)}
+          reviewByEmailPromise={reviewByEmailPromise(
+            user.email,
+            user.accessToken
+          )}
         ></ReviewList>
       </Suspense>
     </div>

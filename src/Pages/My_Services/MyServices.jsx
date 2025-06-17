@@ -6,6 +6,7 @@ import { serviceDetailsPromise } from "../../API/DetailsAPI";
 
 const MyServices = () => {
   const { user } = useContext(AuthContext);
+  console.log(user.accessToken);
   return (
     <div>
       <h1 className="text-3xl font-bold text-center mt-8 mb-8 text-blue-800">
@@ -19,7 +20,10 @@ const MyServices = () => {
         }
       >
         <ServicesList
-          serviceDetailsPromise={serviceDetailsPromise(user.email)}
+          serviceDetailsPromise={serviceDetailsPromise(
+            user.email,
+            user.accessToken
+          )}
         ></ServicesList>
       </Suspense>
     </div>

@@ -3,6 +3,11 @@ export const reviewByIdPromise = cardId => {
 }
 
 
-export const reviewByEmailPromise = email => {
-    return fetch(`http://localhost:3000/reviews?email=${email}`).then(res => res.json())
+export const reviewByEmailPromise = (email, accessToken) => {
+    return fetch(`http://localhost:3000/reviews?email=${email}`, {
+            headers: {
+                authorization: `Bearer ${accessToken}`
+            }
+        })
+        .then(res => res.json())
 }

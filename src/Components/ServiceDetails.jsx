@@ -130,10 +130,8 @@ const ServiceDetails = () => {
       <h2 className="text-xl font-bold mb-4 mt-5">Add Your Review</h2>
 
       <form onSubmit={handleReview}>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Your Rating
-          </label>
+        <div className="mb-3">
+          <label className="block text-sm font-medium  mb-2">Your Rating</label>
           <Rating
             style={{ maxWidth: 200 }}
             value={rating}
@@ -142,9 +140,7 @@ const ServiceDetails = () => {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Your Review
-          </label>
+          <label className="block text-sm font-medium  mb-2">Your Review</label>
           <textarea
             name="review"
             placeholder="Share your experience with this service..."

@@ -1,3 +1,10 @@
-export const serviceDetailsPromise = email => {
-    return fetch(`http://localhost:3000/services?email=${email}`).then(res => res.json())
+export const serviceDetailsPromise = (email, accessToken) => {
+    return fetch(`http://localhost:3000/services?email=${email}`, {
+                headers: {
+                    authorization: `Bearer ${accessToken}`
+                }
+            }
+
+        )
+        .then(res => res.json())
 }

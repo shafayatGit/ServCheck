@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router";
 
 const Services = () => {
   const sampleServices = useLoaderData();
-  //   console.log(services);
+  console.log(sampleServices);
 
   const [query, setQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");

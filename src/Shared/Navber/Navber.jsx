@@ -3,6 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../assets/AuthContext/AuthContext";
 import { Tooltip } from "react-tooltip";
+import ThemeToggle from "../../ThemeToggle/ThemeToggle";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -39,7 +40,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                     to={"/"}
                   >
@@ -51,7 +52,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                     to={"/services"}
                   >
@@ -63,7 +64,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                     to={"/addService"}
                   >
@@ -75,7 +76,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                     to={"/myServices"}
                   >
@@ -87,7 +88,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300 active:shadow-lg active:shadow-blue-300"
                     }
                     to={"/myReviews"}
                   >
@@ -103,7 +104,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                   >
                     Home
@@ -115,7 +116,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive
                         ? "text-blue-300 font-bold border-b border-blue-400"
-                        : ""
+                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                     }
                   >
                     Services
@@ -132,6 +133,7 @@ const Navbar = () => {
             alt=""
           />
           <Link className=" text-2xl">ServCheck</Link>
+          <ThemeToggle></ThemeToggle>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex ">
@@ -143,7 +145,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                   to={"/"}
                 >
@@ -155,7 +157,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                   to={"/services"}
                 >
@@ -167,7 +169,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                   to={"/addService"}
                 >
@@ -179,7 +181,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                   to={"/myServices"}
                 >
@@ -191,7 +193,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300 active:shadow-lg active:shadow-blue-300"
                   }
                   to={"/myReviews"}
                 >
@@ -207,7 +209,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                 >
                   Home
@@ -219,7 +221,7 @@ const Navbar = () => {
                   className={({ isActive }) =>
                     isActive
                       ? "text-blue-300 font-bold border-b border-blue-400"
-                      : ""
+                      : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
                   }
                 >
                   Services
@@ -243,10 +245,10 @@ const Navbar = () => {
             <NavLink>
               <button
                 onClick={logOutUser}
-                className="btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white"
+                className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white"
               >
-                <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-600 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
-                <span class="relative text-white transition duration-300 group-hover:text-white group-active:text-white ease">
+                <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
+                <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
                   Logout
                 </span>
               </button>
@@ -255,10 +257,20 @@ const Navbar = () => {
         ) : (
           <>
             <NavLink to={"login"}>
-              <button className="btn">Login</button>
+              <button className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white">
+                <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
+                <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
+                  Login
+                </span>
+              </button>
             </NavLink>
             <NavLink to={"register"}>
-              <button className="btn">Register</button>
+              <button className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white">
+                <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
+                <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
+                  Register
+                </span>
+              </button>
             </NavLink>
           </>
         )}

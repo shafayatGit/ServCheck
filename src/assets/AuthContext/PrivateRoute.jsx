@@ -9,7 +9,7 @@ const PrivateRoute = ({ children }) => {
 
   const location = useLocation();
 
-  if (loading && user !== null) {
+  if (loading) {
     return (
       <div className="w-full h-dvh mx-auto flex justify-center items-center">
         <span className="loading loading-spinner loading-xl"></span>
@@ -18,6 +18,7 @@ const PrivateRoute = ({ children }) => {
   }
 
   if (user) return children;
+  return <Navigate to={"/login"}></Navigate>;
 };
 
 export default PrivateRoute;
