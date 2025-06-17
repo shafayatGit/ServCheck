@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
             {features.map((item, i) => (
               <div
                 key={i}
-                className=" p-9 flex flex-col justify-center rounded-xl shadow-md hover:shadow-blue-300 shadow-blue-300  hover:shadow-lg transition duration-300 hover:scale-105"
+                className=" p-9 flex flex-col justify-center rounded-xl shadow-md hover:shadow-blue-400 active:shadow-blue-400 shadow-blue-400  hover:shadow-lg active:shadow-lg transition duration-300 hover:scale-105 active:scale-105"
               >
                 <div className="mb-4 mx-auto">{item.icon}</div>
                 <h3 className="text-xl font-semibold ">{item.title}</h3>

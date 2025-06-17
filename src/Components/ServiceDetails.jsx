@@ -81,7 +81,7 @@ const ServiceDetails = () => {
             <img className="rounded-xl h-86" src={photoUrl} alt="Movie" />
           </figure>
           <div className="card-body">
-            <div className="flex justify-between">
+            <div className="flex flex-col md:flex-row justify-between">
               <h2 className="text-xl font-semibold">
                 Service Name: <br />
                 <span className="border-2 mt-2 text-sm border-blue-400 rounded-full bg-blue-200 px-3 py-1 text-black">
