@@ -11,7 +11,13 @@ const MyServices = () => {
       <h1 className="text-3xl font-bold text-center mt-8 mb-8 text-blue-800">
         My Services
       </h1>
-      <Suspense>
+      <Suspense
+        fallback={
+          <div className="w-full h-dvh mx-auto flex justify-center items-center">
+            <span className="loading loading-dots loading-xl"></span>
+          </div>
+        }
+      >
         <ServicesList
           serviceDetailsPromise={serviceDetailsPromise(user.email)}
         ></ServicesList>

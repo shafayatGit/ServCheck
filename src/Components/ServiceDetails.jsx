@@ -1,4 +1,4 @@
-import React, { use, useContext, useState } from "react";
+import React, { Suspense, use, useContext, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { Star, MapPin, Clock, Phone, Mail, User, Calendar } from "lucide-react";
 import { AuthContext } from "../assets/AuthContext/AuthContext";
@@ -7,8 +7,10 @@ import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 import axios from "axios";
+import ServiceReviewList from "./serviceReviewList";
+import { reviewByIdPromise } from "../API/ReviewsAPI";
 
-const ServiceDetails = ({ reviewByIdPromise }) => {
+const ServiceDetails = () => {
   const Servicedata = useLoaderData();
 
   // const [reviews, setReviews] = useState(reviewData);
@@ -18,9 +20,9 @@ const ServiceDetails = ({ reviewByIdPromise }) => {
 
   const singleService = Servicedata.find((service) => service._id === id);
   //   console.log(singleService);
-  const { category, description, title, price, photoUrl } = singleService;
+  const { _id, category, description, title, price, photoUrl } = singleService;
 
-  const [service] = useState(singleService);
+  // const [service] = useState(singleService);
 
   // const formatDate = (dateString) => {
   //   return new Date(dateString).toLocaleDateString("en-US", {
@@ -38,11 +40,14 @@ const ServiceDetails = ({ reviewByIdPromise }) => {
     const review = form.review.value;
     // const reviewInfo = Object.fromEntries(formData.entries());
     const newReview = {
+      cardId: id,
       review: review,
       rating: rating,
       date: new Date().toISOString(),
       displayName: user.displayName,
       photoUrl: user.photoURL,
+      email: user.email,
+      title: title,
     };
     console.log(newReview);
 
@@ -122,7 +127,7 @@ const ServiceDetails = ({ reviewByIdPromise }) => {
         </div>
       </div>
       {/* Add Review Section */}
-      <h2 className="text-xl font-bold mb-4">Add Your Review</h2>
+      <h2 className="text-xl font-bold mb-4 mt-5">Add Your Review</h2>
 
       <form onSubmit={handleReview}>
         <div>
@@ -154,6 +159,20 @@ const ServiceDetails = ({ reviewByIdPromise }) => {
           className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
         ></input>
       </form>
+      <div>
+        <h1>Reviews</h1>
+        <Suspense
+          fallback={
+            <div className="w-full h-dvh mx-auto flex justify-center items-center">
+              <span className="loading loading-dots loading-xl"></span>
+            </div>
+          }
+        >
+          {/* <ServiceReviewList
+            reviewByIdPromise={reviewByIdPromise(_id)}
+          ></ServiceReviewList> */}
+        </Suspense>
+      </div>
     </div>
   );
 };
