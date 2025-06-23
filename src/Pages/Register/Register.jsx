@@ -94,21 +94,21 @@ const Register = () => {
     <Fade>
       {" "}
       <div>
-        <div className="hero bg-blue-200 min-h-screen nuni">
-          <div className="hero-content flex-col ">
+        <div className="hero bg-gradient-to-br from-emerald-200 to-emerald-600 min-h-screen nuni">
+          <div className="hero-content mt-10   flex-col ">
             <div className="text-center">
-              <h1 className="text-5xl text-blue-700 font-bold">
+              <h1 className="text-4xl bg-gradient-to-br from-emerald-800 to-emerald-300 bg-clip-text text-transparent font-bold">
                 Register now!
               </h1>
             </div>
-            <div className="card bg-blue-300 shadow-blue-300 w-full max-w-sm shrink-0 shadow-2xl">
+            <div className="card  bg-gradient-to-br from-emerald-200 to-emerald-600 shadow-emerald-200 w-full max-w-sm shrink-0 shadow-2xl">
               <div className="card-body">
                 <form onSubmit={handleRegister}>
                   <fieldset className="fieldset">
                     <button
                       onClick={handleGoogleSignUp}
                       type="button"
-                      className=" cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
+                      className="hover:bg-emerald-200 active:bg-emerald-200 cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
                     >
                       <img
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -158,7 +158,7 @@ const Register = () => {
                 </form>
                 <div className="flex gap-2 justify-center">
                   <h1>Already have an account?</h1>
-                  <Link className="text-blue-600" to={"/login"}>
+                  <Link className="text-black font-medium " to={"/login"}>
                     Login
                   </Link>
                 </div>

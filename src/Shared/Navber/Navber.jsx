@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <Slide>
-      <div className="py-3 mont navbar bg-base-100 shadow-sm border-b border-blue-400">
+      <div className="py-3 mont navbar bg-base-100 shadow-sm border-b border-emerald-600">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className=" lg:hidden">
@@ -41,8 +41,8 @@ const Navbar = () => {
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
                       to={"/"}
                     >
@@ -53,8 +53,8 @@ const Navbar = () => {
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
                       to={"/services"}
                     >
@@ -65,8 +65,8 @@ const Navbar = () => {
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
                       to={"/addService"}
                     >
@@ -77,8 +77,8 @@ const Navbar = () => {
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
                       to={"/myServices"}
                     >
@@ -89,8 +89,8 @@ const Navbar = () => {
                     <NavLink
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300 active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
                       to={"/myReviews"}
                     >
@@ -102,24 +102,24 @@ const Navbar = () => {
                 <>
                   <li>
                     <NavLink
-                      to={"/"}
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
+                      to={"/"}
                     >
                       Home
                     </NavLink>
                   </li>
                   <li>
                     <NavLink
-                      to={"/services"}
                       className={({ isActive }) =>
                         isActive
-                          ? "text-blue-300 font-bold border-b border-blue-400"
-                          : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                       }
+                      to={"/services"}
                     >
                       Services
                     </NavLink>
@@ -129,25 +129,30 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center">
-            <img
+            {/* <img
               className="w-10 h-10"
               src="https://i.ibb.co/tMBfjNrN/logo.png"
               alt=""
-            />
-            <Link className=" text-2xl">ServCheck</Link>
+            /> */}
+            <Link
+              className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ text-2xl md:text-4xl font-bold"
+            >
+              ServCheck
+            </Link>
             <ThemeToggle></ThemeToggle>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex ">
-          <ul className="z-100 menu menu-horizontal px-1 gap-2 font-medium">
+          <ul className="text-emerald-300 z-100 text-lg menu menu-horizontal px-1 gap-2 font-normal">
             {user ? (
               <>
                 <li>
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
                     to={"/"}
                   >
@@ -158,8 +163,8 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
                     to={"/services"}
                   >
@@ -170,8 +175,8 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
                     to={"/addService"}
                   >
@@ -182,8 +187,8 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
                     to={"/myServices"}
                   >
@@ -194,8 +199,8 @@ const Navbar = () => {
                   <NavLink
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300 active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
                     to={"/myReviews"}
                   >
@@ -207,24 +212,24 @@ const Navbar = () => {
               <>
                 <li>
                   <NavLink
-                    to={"/"}
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
+                    to={"/"}
                   >
                     Home
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
-                    to={"/services"}
                     className={({ isActive }) =>
                       isActive
-                        ? "text-blue-300 font-bold border-b border-blue-400"
-                        : "hover:shadow-lg hover:shadow-blue-300  active:shadow-lg active:shadow-blue-300"
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
                     }
+                    to={"/services"}
                   >
                     Services
                   </NavLink>
@@ -247,34 +252,76 @@ const Navbar = () => {
               <NavLink>
                 <button
                   onClick={logOutUser}
-                  className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white"
+                  className="relative inline-flex items-center px-7 py-1 md:px-12 md:py-3 overflow-hidden text-lg font-medium text-emerald-400 border-2 border-emerald-600 rounded-full hover:text-white group hover:bg-gray-50 active:text-white  active:bg-gray-50"
                 >
-                  <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
-                  <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
-                    Logout
+                  <span class="absolute left-0 block w-full h-0 transition-all bg-emerald-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                  <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 group-active:translate-x-0 ease">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
                   </span>
+                  <span class="relative">LogOut</span>
                 </button>
               </NavLink>
             </div>
           ) : (
-            <>
+            <div className="flex gap-3">
               <NavLink to={"login"}>
-                <button className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white">
-                  <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
-                  <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
-                    Login
+                <button className="relative inline-flex items-center px-7 py-1 md:px-12 md:py-3 overflow-hidden text-lg font-medium text-emerald-400 border-2 border-emerald-600 rounded-full hover:text-white group hover:bg-gray-50 active:text-white  active:bg-gray-50">
+                  <span class="absolute left-0 block w-full h-0 transition-all bg-emerald-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                  <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 group-active:translate-x-0 ease">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
                   </span>
+                  <span class="relative">Login</span>
                 </button>
               </NavLink>
-              <NavLink to={"register"}>
-                <button className="bg-blue-700 btn rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-blue-400  text-white">
-                  <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-blue-300 top-1/2 group-hover:h-64 group-hover:-translate-y-32 group-active:h-64 group-active:-translate-y-32 ease"></span>
-                  <span class="relative text-white transition duration-300 group-hover:text-black group-active:text-white ease">
-                    Register
+              <NavLink to={"/register"}>
+                <button className=" hidden relative md:inline-flex items-center px-7 py-1 md:px-12 md:py-3 overflow-hidden text-lg font-medium text-emerald-400 border-2 border-emerald-600 rounded-full hover:text-white group hover:bg-gray-50 active:text-white  active:bg-gray-50">
+                  <span class="absolute left-0 block w-full h-0 transition-all bg-emerald-600 opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
+                  <span class="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 group-active:translate-x-0 ease">
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
                   </span>
+                  <span class="relative">Register</span>
                 </button>
               </NavLink>
-            </>
+            </div>
           )}
         </div>
       </div>

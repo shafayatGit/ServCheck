@@ -11,7 +11,7 @@ const ServiceReviewList = ({ reviewByIdPromise }) => {
         reviews?.map((review) => (
           <div
             key={review.id}
-            className=" mb-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border bo"
+            className=" mb-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-emerald-700"
           >
             <div className="flex items-start space-x-4">
               {/* Profile Photo */}
@@ -27,7 +27,7 @@ const ServiceReviewList = ({ reviewByIdPromise }) => {
                 {/* Header with name, rating, and date */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                   <div className="flex items-center space-x-3 mb-2 sm:mb-0">
-                    <h3 className="text-lg font-semibold ">
+                    <h3 className="text-lg bg-gradient-to-br from-emerald-200 to-emerald-400 bg-clip-text text-transparent font-semibold ">
                       {review.displayName}
                     </h3>
                     <Rating

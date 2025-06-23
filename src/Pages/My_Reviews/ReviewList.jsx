@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
@@ -98,7 +98,7 @@ const ReviewList = ({ reviewByEmailPromise }) => {
       {reviews.map((reviewData) => (
         <div
           key={reviewData.id}
-          className=" mb-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border"
+          className=" mb-5 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-6 border border-emerald-700  "
         >
           <div className="flex items-start space-x-4">
             {/* Profile Photo */}
@@ -114,7 +114,7 @@ const ReviewList = ({ reviewByEmailPromise }) => {
               {/* Header with name, rating, and date */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
                 <div className="flex items-center space-x-3 mb-2 sm:mb-0">
-                  <h3 className="text-lg font-semibold ">
+                  <h3 className="text-lg  bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent font-semibold ">
                     {reviewData.displayName}
                   </h3>
 
@@ -126,9 +126,12 @@ const ReviewList = ({ reviewByEmailPromise }) => {
                 </div>
                 <div className="text-sm ">{reviewData.date}</div>
               </div>
-              <div className="flex items-center text-lg font-semibold ">
-                Title: <h3 className="text-sm">{reviewData.title}</h3>
-              </div>
+              <h2 className="mb-3 flex items-center gap-2 text-xl bg-gradient-to-br from-emerald-300 to-emerald-500 bg-clip-text text-transparent font-semibold">
+                <span className="border-2 mt-2 text-sm border-emerald-400 rounded-full bg-emerald-200 px-3 py-1 text-black">
+                  {reviewData.title}
+                </span>
+              </h2>
+
               {/* Review Text */}
               <div className="flex justify-between">
                 <div className=" text-lg font-normal max-w-xl md:max-w-3xl overflow-hidden">

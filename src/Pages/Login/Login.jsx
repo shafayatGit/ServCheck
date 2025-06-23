@@ -53,19 +53,21 @@ const Login = () => {
     <Fade>
       {" "}
       <div>
-        <div className="hero bg-blue-200 min-h-screen nuni">
+        <div className="hero bg-gradient-to-br from-emerald-200 to-emerald-600 min-h-screen nuni">
           <div className="hero-content flex-col ">
             <div className="text-center">
-              <h1 className="text-5xl font-bold text-blue-700">Login now!</h1>
+              <h1 className="text-4xl bg-gradient-to-br from-emerald-800 to-emerald-300 bg-clip-text text-transparent font-bold">
+                Login now!
+              </h1>
             </div>
-            <div className="card bg-blue-300 shadow-blue-300 w-full max-w-sm shrink-0 shadow-2xl">
+            <div className="card  bg-gradient-to-br from-emerald-200 to-emerald-600 shadow-emerald-200 w-full max-w-sm shrink-0 shadow-2xl">
               <div className="card-body">
                 <form onSubmit={handleLogin}>
                   <fieldset className="fieldset">
                     <button
                       onClick={handleGoogleSignUp}
                       type="button"
-                      className=" cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
+                      className="hover:bg-emerald-200 active:bg-emerald-200 cursor-pointer w-full bg-white text-black font-semibold py-2 rounded-lg flex items-center justify-center gap-2 "
                     >
                       <img
                         src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -101,7 +103,7 @@ const Login = () => {
                 </form>
                 <div className="flex gap-2 justify-center">
                   <h1>Don't have an account?</h1>
-                  <Link className="text-blue-600" to={"/register"}>
+                  <Link className="text-black font-medium " to={"/register"}>
                     Register Now!
                   </Link>
                 </div>

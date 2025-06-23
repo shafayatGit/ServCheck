@@ -97,7 +97,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="text-emerald-300">
               <th></th>
               <th>Name</th>
               <th>Category</th>
@@ -109,7 +109,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
             {serviceData.map((service) => (
               <tr
                 key={service._id}
-                className="border-b  border-blue-500 border-opacity-20"
+                className="border-b  border-emerald -500 border-opacity-20"
               >
                 <td className="p-3 ">
                   <img

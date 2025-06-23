@@ -31,8 +31,10 @@ const PartnersSection = () => {
       {" "}
       <section className="py-16 ">
         <div className="max-w-7xl mx-auto px-4 text-center ">
-          <h2 className="text-3xl font-bold  mb-4">Meet Our Partners</h2>
-          <p className=" mb-12">
+          <h2 className=" font-bold text-4xl bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent  mb-4">
+            Meet Our Partners
+          </h2>
+          <p className="font-medium text-lg bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mb-12">
             We’re proud to collaborate with industry leaders who help power our
             platform.
           </p>
@@ -40,7 +42,7 @@ const PartnersSection = () => {
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl  rounded-lg shadow-md hover:shadow-xl"
+                className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 p-8 shadow-emerald-400 hover:shadow-emerald-400  active:shadow-emerald-400 active:shadow-xl  rounded-lg shadow-md hover:shadow-xl"
               >
                 <img
                   src={partner.logo}

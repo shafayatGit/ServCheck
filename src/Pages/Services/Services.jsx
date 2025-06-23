@@ -29,7 +29,7 @@ const Services = () => {
 
   return (
     <div className="px-4 py-10 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">
+      <h2 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mb-8 text-center">
         All Services
       </h2>
 
@@ -40,13 +40,13 @@ const Services = () => {
           placeholder="Search services..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full md:w-1/2 px-4 py-2 border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
+          className="w-full md:w-1/2 px-4 py-2 border border-emerald-400 rounded focus:outline-none focus:ring-2 focus:ring-emerald-700"
         />
 
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="w-full md:w-1/4 px-4 py-2 border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
+          className="w-full md:w-1/4 px-4 py-2 border border-emerald-400 rounded focus:outline-none focus:ring-2 focus:ring-emerald-700"
         >
           {categories.map((cat) => (
             <option className="text-black" key={cat} value={cat}>
@@ -61,7 +61,7 @@ const Services = () => {
         {filteredServices.map((service) => (
           <div
             key={service._id}
-            className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 image-full  shadow-blue-400 hover:shadow-blue-400  active:shadow-blue-400 active:shadow-xl bg-white rounded-lg shadow hover:shadow-xl"
+            className="hover:-translate-y-2 active:-translate-y-2 transition-all duration-300 image-full  shadow-emerald-400 hover:shadow-emerald-400  active:shadow-emerald-400 active:shadow-xl bg-white rounded-lg shadow hover:shadow-xl"
           >
             <img
               src={service.photoUrl}
@@ -82,9 +82,9 @@ const Services = () => {
                 </span>
               </div>
               <Link to={`/services/${service._id}`}>
-                <button className="relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-blue-600 rounded-full hover:bg-blue-300 active:bg-blue-300 group">
+                <button className="border-2 border-emerald-500 relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-gradient-to-br from-emerald-400 to-emerald-900 rounded-full hover:bg-emerald-300 active:bg-emerald-300 group">
                   <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-                  <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-600 group-active:text-blue-600">
+                  <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-emerald-600 group-active:text-emerald-600">
                     See Details
                   </span>
                 </button>

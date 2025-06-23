@@ -8,7 +8,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
         {/* Logo and Description */}
         <div>
-          <h1 className="text-2xl font-bold mb-3">ServCheck</h1>
+          <h1
+            className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ text-2xl md:text-4xl font-bold mb-3"
+          >
+            ServCheck
+          </h1>
           <p className="text-sm text-gray-300">
             ServCheck is your trusted platform for reading and writing genuine
             service reviews. Empowering users to make smart decisions, and
@@ -18,26 +23,25 @@ const Footer = () => {
 
         {/* Useful Links */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <h2
+            className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ text-2xl font-bold  mb-4"
+          >
+            Useful Links
+          </h2>
+          <ul
+            className="space-y-2 text-sm bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ "
+          >
             <li>
               <Link to="/" className="hover:text-white transition">
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="/about" className="hover:text-white transition">
-                About Us
-              </Link>
-            </li>
+
             <li>
               <Link to="/services" className="hover:text-white transition">
                 Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-white transition">
-                Contact
               </Link>
             </li>
           </ul>
@@ -45,15 +49,20 @@ const Footer = () => {
 
         {/* Social Media */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
+          <h2
+            className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ text-2xl font-bold mb-4"
+          >
+            Follow Us
+          </h2>
           <div className="flex space-x-4 text-gray-300">
-            <Link className="hover:text-blue-400 transition text-xl">
+            <Link className="hover:text-emerald-700 transition text-xl">
               <FaFacebookF />
             </Link>
-            <Link className="hover:text-blue-300 transition text-xl">
+            <Link className="hover:text-emerald-700 transition text-xl">
               <FaTwitter />
             </Link>
-            <Link className="hover:text-blue-200 transition text-xl">
+            <Link className="hover:text-emerald-700 transition text-xl">
               <FaLinkedinIn />
             </Link>
           </div>
@@ -61,7 +70,12 @@ const Footer = () => {
 
         {/* Contact or Support */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Support</h2>
+          <h2
+            className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+ text-2xl font-bold mb-4"
+          >
+            Support
+          </h2>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
               Email:{" "}

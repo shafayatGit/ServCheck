@@ -42,8 +42,8 @@ const AddServices = () => {
 
   return (
     <Fade>
-      <div className="nuni bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-700 max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center mb-6 ">
+      <div className="nuni text-sm bg-gradient-to-br from-emerald-500 to-emerald-800 max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
+        <h2 className="text-4xl bg-gradient-to-br from-emerald-700 to-emerald-900 bg-clip-text text-transparent font-bold text-center mb-6 ">
           Add New Service
         </h2>
         <form onSubmit={handleAddService} className="space-y-5 ">
@@ -55,7 +55,7 @@ const AddServices = () => {
               name="photoUrl"
               type="text"
               placeholder="Enter image URL"
-              className="  text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="  text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -67,7 +67,7 @@ const AddServices = () => {
               name="title"
               type="text"
               placeholder="Enter title"
-              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -79,7 +79,7 @@ const AddServices = () => {
               name="name"
               type="text"
               placeholder="Enter company name"
-              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -91,7 +91,7 @@ const AddServices = () => {
               name="website"
               type="text"
               placeholder="Enter website URL"
-              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -103,7 +103,7 @@ const AddServices = () => {
               name="description"
               placeholder="Describe your service"
               rows="4"
-              className="text-white w-full px-4 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-emerald-400"
             ></textarea>
           </div>
 
@@ -115,7 +115,7 @@ const AddServices = () => {
               name="category"
               type="text"
               placeholder="e.g. Marketing, Design"
-              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -125,7 +125,7 @@ const AddServices = () => {
               name="price"
               type="number"
               placeholder="Enter price"
-              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="text-white w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
           </div>
 
@@ -157,7 +157,7 @@ const AddServices = () => {
 
           <button
             type="submit"
-            className=" cursor-pointer w-full bg-blue-400 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow transition"
+            className=" cursor-pointer w-full bg-emerald-500 hover:bg-emerald-700 text-white font-semibold py-2 px-4 rounded-md shadow transition"
           >
             Submit Service
           </button>

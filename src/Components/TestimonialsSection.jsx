@@ -29,8 +29,10 @@ const TestimonialsSection = () => {
       {" "}
       <section className=" py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold  mb-4">What Our Users Say</h2>
-          <p className=" mb-12">
+          <h2 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent  mb-4">
+            What Our Users Say
+          </h2>
+          <p className="font-medium text-lg bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mb-12">
             Real stories from our growing community of reviewers and service
             seekers.
           </p>
@@ -38,7 +40,7 @@ const TestimonialsSection = () => {
             {testimonials.map((user, i) => (
               <div
                 key={i}
-                className="p-9 px-3 flex flex-col justify-center rounded-xl shadow-md hover:shadow-blue-400 active:shadow-blue-400 shadow-blue-400  hover:shadow-lg active:shadow-lg transition duration-300 hover:scale-105 active:scale-105"
+                className="p-9 px-3 flex flex-col justify-center rounded-xl shadow-md hover:shadow-emerald-400 active:shadow-emerald-400 shadow-emerald-400  hover:shadow-lg active:shadow-lg transition duration-300 hover:scale-105 active:scale-105"
               >
                 <img
                   src={user.avatar}

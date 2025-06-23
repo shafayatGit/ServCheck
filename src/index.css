@@ -19,9 +19,152 @@
   font-style: normal;
 }
 
+/* From Uiverse.io by SelfMadeSystem */ 
+/* Yoinked from CodePen, but improved the animation
+so that it is smooth among other more minor things */
 
+.codepen-button {
+  display: block;
+  cursor: pointer;
+  color: black;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+}
 
+.codepen-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(115deg,#93f9b9,#1d976c ,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop .75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out;
+}
 
+.codepen-button:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+.codepen-button:active::before {
+  animation-play-state: running;
+  transition-duration: 1s;
+  translate: 0% 0%;
+}
 
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
 
-    
+.codepen-button span {
+  position: relative;
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+   background:linear-gradient( #1d976c, #1d976c);
+  border-radius: 20px;
+  height: 100%;
+}
+
+/* Button Scroll */
+.button_scroll {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #1d976c,
+      #1d976c,
+      #1d976c,
+      #1d976c,
+      #1d976c,
+      #1d976c,
+      transparent
+    );
+    border: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+
+  .svgIcon path {
+    fill: black;
+  }
+
+  .button_scroll:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+   
+    align-items: center;
+  }
+
+  .button_scroll:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+
+  .button_scroll:active {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+   
+    align-items: center;
+  }
+
+  .button_scroll:active .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+
+  .button_scroll::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: black;
+    /* transition-duration: .3s; */
+    font-size: 5px;
+    font-weight: 500;
+  }
+
+  .button_scroll:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+   .button_scroll:active::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
