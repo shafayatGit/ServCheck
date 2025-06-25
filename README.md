@@ -122,3 +122,19 @@ ServCheck empowers users to:
 - ⏫ **React CountUp** for users, services, and reviews stats
 - 🛡️ JWT secured backend
 - 🎨 Beautiful, non-generic design (No Gobindo UI!)
+
+---
+## 🚀 How to Run This Project Locally
+
+Follow the steps below to run this project on your local machine:
+
+### 🛠️ Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Git
+
+### 📦 Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
