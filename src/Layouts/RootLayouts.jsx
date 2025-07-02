@@ -7,7 +7,7 @@ import ScrollToTop from "../Components/ScrollToTop";
 
 const RootLayouts = () => {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="">
       <Navber></Navber>
       <Outlet></Outlet>
       <Footer></Footer>

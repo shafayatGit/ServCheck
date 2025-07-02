@@ -13,7 +13,7 @@ const Navbar = () => {
     <Slide>
       <div className="py-3 mont navbar bg-base-100 shadow-sm border-b border-emerald-600">
         <div className="navbar-start">
-          <div className="dropdown">
+          <div className="dropdown z-50 ">
             <div tabIndex={0} role="button" className=" lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 z-50  rounded-box mt-3 w-52 p-2 shadow"
             >
               {user ? (
                 <>

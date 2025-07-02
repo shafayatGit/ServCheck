@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Link, useLoaderData } from "react-router";
 
 const Services = () => {
@@ -82,12 +83,14 @@ const Services = () => {
                 </span>
               </div>
               <Link to={`/services/${service._id}`}>
-                <button className="border-2 border-emerald-500 relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-gradient-to-br from-emerald-400 to-emerald-900 rounded-full hover:bg-emerald-300 active:bg-emerald-300 group">
-                  <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
-                  <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-emerald-600 group-active:text-emerald-600">
-                    See Details
-                  </span>
-                </button>
+                <Slide>
+                  <button className="border-2 border-emerald-500 relative inline-flex items-center justify-start inline-block px-5 py-3 overflow-hidden font-medium transition-all bg-gradient-to-br from-emerald-400 to-emerald-900 rounded-full hover:bg-emerald-300 active:bg-emerald-300 group">
+                    <span class="absolute inset-0 border-0 group-hover:border-[25px] ease-linear duration-100 transition-all border-white rounded-full"></span>
+                    <span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-emerald-600 group-active:text-emerald-600">
+                      See Details
+                    </span>
+                  </button>
+                </Slide>
               </Link>
             </div>
           </div>

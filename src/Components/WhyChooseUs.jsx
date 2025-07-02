@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
     <Fade>
       {" "}
       <section className="py-16 ">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mb-4">
             Why Choose Us?
           </h2>

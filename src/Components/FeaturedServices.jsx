@@ -17,7 +17,7 @@ const FeaturedServices = () => {
   }, []);
   return (
     <Fade>
-      <div>
+      <div className="max-w-7xl mx-auto">
         <h1 className="font-bold text-center mt-22 mb-8 text-4xl bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent">
           Featured Services
         </h1>
