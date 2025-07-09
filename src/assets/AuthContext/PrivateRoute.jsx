@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   // console.log(user);
-  const navigate = useNavigate();
+ 
 
   if (loading && user !== null) {
     return (
