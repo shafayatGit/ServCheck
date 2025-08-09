@@ -30,7 +30,7 @@ const Services = () => {
   });
 
   return (
-    <div className="px-4 py-10 max-w-7xl mx-auto">
+    <div className="px-4 py-10 mt-26 max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mb-8 text-center">
         All Services
       </h2>

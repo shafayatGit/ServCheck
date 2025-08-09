@@ -11,7 +11,7 @@ const MyServices = () => {
   return (
     <Slide>
       {" "}
-      <div className="max-w-7xl mx-auto  nuni">
+      <div className=" px-5 mt-26 mx-auto  nuni">
         <h1 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mt-8 mb-8 text-center">
           My Services
         </h1>

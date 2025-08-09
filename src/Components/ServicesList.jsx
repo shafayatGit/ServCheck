@@ -131,7 +131,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
                 </td>
 
                 <td className="p-3 ">
-                  <div className="px-3 py-1  font-semibold rounded-md flex flex-col gap-3">
+                  <div className="px-3 py-1 font-semibold rounded-md flex flex-col gap-3">
                     <Link>
                       {" "}
                       <button
@@ -139,7 +139,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
                           setIsModalOpen(true);
                           handleServiceId(service._id);
                         }}
-                        className="btn"
+                        className="btn w-20"
                       >
                         <GrUpdate
                           className="text-green-700 rounded-full"
@@ -233,7 +233,7 @@ const ServicesList = ({ serviceDetailsPromise }) => {
 
                     <button
                       onClick={() => handleDelete(service._id)}
-                      className=" btn"
+                      className=" btn w-20"
                     >
                       <TiDeleteOutline className="text-red-700" size={20} />
                     </button>

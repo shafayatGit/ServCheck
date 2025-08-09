@@ -1,4 +1,4 @@
-import React, { Suspense, use, useContext, useState } from "react";
+import React, { Suspense, useContext, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
 import { Star, MapPin, Clock, Phone, Mail, User, Calendar } from "lucide-react";
 import { AuthContext } from "../assets/AuthContext/AuthContext";
@@ -76,7 +76,7 @@ const ServiceDetails = () => {
   return (
     <div className="px-5">
       <Slide>
-        <div className="nuni px-5 max-w-6xl mx-auto mt-24 card card-side bg-base-100 flex items-center flex-col md:flex-row shadow shadow-emerald-300 hover:scale-105 active:scale-105 transition ease-in-out hover:shadow-2xl hover:shadow-emerald-300 active:shadow-2xl active:shadow-emerald-300 work">
+        <div className="nuni px-5 mx-auto mt-24 card card-side bg-base-100 flex items-center flex-col md:flex-row shadow shadow-emerald-300 hover:scale-105 active:scale-105 transition ease-in-out hover:shadow-2xl hover:shadow-emerald-300 active:shadow-2xl active:shadow-emerald-300 work">
           <figure>
             <img className="rounded-xl h-86" src={photoUrl} alt="Movie" />
           </figure>

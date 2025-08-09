@@ -42,7 +42,7 @@ const AddServices = () => {
 
   return (
     <Fade>
-      <div className="nuni text-sm bg-gradient-to-br from-emerald-500 to-emerald-800 max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
+      <div className="nuni mt-26 text-sm bg-gradient-to-br from-emerald-500 to-emerald-800 max-w-2xl mx-auto  p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl bg-gradient-to-br from-emerald-700 to-emerald-900 bg-clip-text text-transparent font-bold text-center mb-6 ">
           Add New Service
         </h2>

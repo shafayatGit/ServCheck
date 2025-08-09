@@ -10,7 +10,7 @@ const MyReviews = () => {
   return (
     <Slide>
       {" "}
-      <div className="nuni">
+      <div className="nuni mt-26">
         <h1 className="text-4xl font-bold bg-gradient-to-br from-emerald-200 to-emerald-600 bg-clip-text text-transparent mt-8 mb-8 text-center">
           My Reviews
         </h1>
