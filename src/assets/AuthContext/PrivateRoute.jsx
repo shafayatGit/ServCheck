@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AuthContext } from "./AuthContext";
-import { Navigate, useNavigate } from "react-router";
-import Swal from "sweetalert2";
+import { Navigate } from "react-router";
+// import Swal from "sweetalert2";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
