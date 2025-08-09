@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../assets/AuthContext/AuthContext";
@@ -7,7 +7,7 @@ import { auth } from "../../Firebase/firebase.config";
 import { Fade } from "react-awesome-reveal";
 
 const Login = () => {
-  const { loginUser, setUser, setLoading } = useContext(AuthContext);
+  const { loginUser, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   //   Google
