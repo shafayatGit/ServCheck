@@ -1,10 +1,9 @@
-import React, { useContext, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useContext } from "react";
+// import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../assets/AuthContext/AuthContext";
 import { Tooltip } from "react-tooltip";
 import ThemeToggle from "../../ThemeToggle/ThemeToggle";
-import { Slide } from "react-awesome-reveal";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
