@@ -96,6 +96,18 @@ const Navbar = () => {
                       My Reviews
                     </NavLink>
                   </li>
+                  <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
+                    }
+                    to={"/contact"}
+                  >
+                    Contact
+                  </NavLink>
+                </li>
                 </>
               ) : (
                 <>
@@ -146,7 +158,7 @@ const Navbar = () => {
               alt=""
             /> */}
             <Link
-              className="bg-gradient-to-br from-emerald-200 to-emerald-700 bg-clip-text text-transparent
+              className="bg-gradient-to-br ml-2 from-emerald-200 to-emerald-700 bg-clip-text text-transparent
  text-2xl md:text-4xl font-bold"
             >
               ServCheck
@@ -216,6 +228,18 @@ const Navbar = () => {
                     to={"/myReviews"}
                   >
                     My Reviews
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
+                    }
+                    to={"/contact"}
+                  >
+                    Contact
                   </NavLink>
                 </li>
               </>

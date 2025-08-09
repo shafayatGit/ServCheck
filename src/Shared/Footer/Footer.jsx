@@ -1,8 +1,11 @@
-import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+// import React from "react";
+import { useContext } from "react";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
+import { AuthContext } from "../../assets/AuthContext/AuthContext";
 
 const Footer = () => {
+  const { user } = useContext(AuthContext);
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
@@ -44,6 +47,37 @@ const Footer = () => {
                 Services
               </Link>
             </li>
+
+            {user && (
+              <>
+                <li>
+                  <Link
+                    to="/addService"
+                    className="hover:text-white transition"
+                  >
+                    Add Service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/myServices"
+                    className="hover:text-white transition"
+                  >
+                    My Services
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/myReviews" className="hover:text-white transition">
+                    My Reviews
+                  </Link>
+                </li>
+              </>
+            )}
+            <li>
+              <Link to="/contact" className="hover:text-white transition">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -56,13 +90,13 @@ const Footer = () => {
             Follow Us
           </h2>
           <div className="flex space-x-4 text-gray-300">
-            <Link className="hover:text-emerald-700 transition text-xl">
+            <Link to={"https://www.facebook.com/ShafayatHossain.DRMC/"} className="hover:text-emerald-700 transition text-xl">
               <FaFacebookF />
             </Link>
-            <Link className="hover:text-emerald-700 transition text-xl">
-              <FaTwitter />
+            <Link to={"https://github.com/shafayatGit"} className="hover:text-emerald-700 transition text-xl">
+              <FaGithub />
             </Link>
-            <Link className="hover:text-emerald-700 transition text-xl">
+            <Link to={"https://www.linkedin.com/in/shafayat-hossain-patowary/"} className="hover:text-emerald-700 transition text-xl">
               <FaLinkedinIn />
             </Link>
           </div>
