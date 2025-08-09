@@ -10,8 +10,8 @@ const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
   return (
-    <Slide>
-      <div className="py-3 mont navbar bg-base-100 shadow-sm border-b border-emerald-600">
+    
+      <div className="fixed top-0 z-50 py-3 mont navbar bg-base-100 shadow-sm border-b border-emerald-600">
         <div className="navbar-start">
           <div className="dropdown z-50 ">
             <div tabIndex={0} role="button" className=" lg:hidden">
@@ -124,6 +124,18 @@ const Navbar = () => {
                       Services
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive
+                          ? "shadow-md shadow-emerald-300"
+                          : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
+                      }
+                      to={"/contact"}
+                    >
+                      Contact
+                    </NavLink>
+                  </li>
                 </>
               )}
             </ul>
@@ -234,6 +246,18 @@ const Navbar = () => {
                     Services
                   </NavLink>
                 </li>
+                <li>
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive
+                        ? "shadow-md shadow-emerald-300"
+                        : "hover:shadow-lg hover:shadow-emerald-300  active:shadow-lg active:shadow-emerald-300"
+                    }
+                    to={"/contact"}
+                  >
+                    Contact
+                  </NavLink>
+                </li>
               </>
             )}
           </ul>
@@ -325,7 +349,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-    </Slide>
+    
   );
 };
 

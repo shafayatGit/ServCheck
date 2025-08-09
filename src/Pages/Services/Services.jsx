@@ -10,11 +10,12 @@ const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const categories = [
+    "All",
     "Marketing",
-    "Web Development",
+    "Design",
     "App Development",
-    "DevOps",
-    "Writing",
+    "Cloud Services",
+    "IT Support",
   ];
 
   const filteredServices = sampleServices.filter((service) => {

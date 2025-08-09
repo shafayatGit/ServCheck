@@ -34,7 +34,7 @@ const slides = [
 const BannerSection = () => {
   return (
     <Zoom>
-      <section className="max-w-7xl relative mx-auto">
+      <section className=" relative mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation

@@ -8,7 +8,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   return (
-    <div className="mt-10 nuni">
+    <div className="mt-26 nuni">
       <BannerSection></BannerSection>
 
       <FeaturedServices></FeaturedServices>
